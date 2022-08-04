@@ -1,0 +1,32 @@
+<table border="1">
+    <div>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Id</th>
+        </tr>
+    <% users.forEach(user => { %>
+        <tr>
+            <td><%= user.nombre %></td>
+            <td><%= user.apellido %></td>
+            <td><%= user.id %></td>
+        </tr>
+    <% }) %>
+    </div>
+</table>
+
+<input type="button" onclick="location.href='/'" value="Inicio">
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

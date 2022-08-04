@@ -1,0 +1,15 @@
+html
+    head
+        title="Listado De Usuarios"
+    body 
+        table(border="1")
+            tr 
+                th="Nombre"
+                th="Apellido"
+                th="Id"
+            each user in users
+                tr
+                    td=user.nombre 
+                    td=user.apellido 
+                    td=user.id
+        input(type="button", onclick="location.href='/'" , value="Inicio")
