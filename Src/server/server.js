@@ -3,7 +3,7 @@ const router = require('../routes/routess.js')
 const app = express()
 const port = 8080
 
-//middleware
+
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
