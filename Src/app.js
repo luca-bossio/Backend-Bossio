@@ -1,21 +1,18 @@
-import express from 'express';
-import usuariosRouter from './routes/usuarios.router.js';
-import viewsRouter from './routes/views.router.js';
+import express from "express";
 import __dirname from './utils.js';
+import productRouter from './routes/productRouter.js';
+import cartRouter from './routes/cartRouter.js';
 
 const app = express();
-const PORT = 8080;
 
-const server = app.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`)
-})
+const admin = false
+
+app.listen(8080,()=>console.log("listening on 8080"));
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 
-app.set('views',__dirname + '/views');
-app.use('/api',usuariosRouter);
+app.use('/api',productRouter);
+app.use('/api',cartRouter);
 
-app.use('/',viewsRouter);
-
-app.set('view engine','ejs');
+export default admin
